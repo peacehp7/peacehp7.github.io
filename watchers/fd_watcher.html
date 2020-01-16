@@ -1,0 +1,586 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>fd_watcher · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ziping.he">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="event/create_and_send_event.html" />
+    
+    
+    <link rel="prev" href="timer.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part 0. 概述</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../abstract/compile_and_run.html">
+            
+                <a href="../abstract/compile_and_run.html">
+            
+                    
+                    编译和运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../abstract/config_files.html">
+            
+                <a href="../abstract/config_files.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1. Module</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../modules/define_a_module.html">
+            
+                <a href="../modules/define_a_module.html">
+            
+                    
+                    定义module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../modules/init_and_deinit.html">
+            
+                <a href="../modules/init_and_deinit.html">
+            
+                    
+                    初始化和反初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../modules/add_function.html">
+            
+                <a href="../modules/add_function.html">
+            
+                    
+                    为module添加功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2. Timer & Fd Watcher</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="timer.html">
+            
+                <a href="timer.html">
+            
+                    
+                    timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="fd_watcher.html">
+            
+                <a href="fd_watcher.html">
+            
+                    
+                    fd_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3. Event</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="event/create_and_send_event.html">
+            
+                <a href="event/create_and_send_event.html">
+            
+                    
+                    创建和发送event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="event/event_watcher.html">
+            
+                <a href="event/event_watcher.html">
+            
+                    
+                    event_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="event/event_trans_model.html">
+            
+                <a href="event/event_trans_model.html">
+            
+                    
+                    event收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="event/matrix_link.html">
+            
+                <a href="event/matrix_link.html">
+            
+                    
+                    跨进程event
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Data</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="data/create_and_send_data.html">
+            
+                <a href="data/create_and_send_data.html">
+            
+                    
+                    创建和发送data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="data/data_watcher.html">
+            
+                <a href="data/data_watcher.html">
+            
+                    
+                    data_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="data/data_trans_model.html">
+            
+                <a href="data/data_trans_model.html">
+            
+                    
+                    data收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Other Components</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../other_components/log.html">
+            
+                <a href="../other_components/log.html">
+            
+                    
+                    日志功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../other_components/config_rw.html">
+            
+                <a href="../other_components/config_rw.html">
+            
+                    
+                    配置读写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../other_components/string_handling.html">
+            
+                <a href="../other_components/string_handling.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../other_components/lock.html">
+            
+                <a href="../other_components/lock.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../other_components/db_operation.html">
+            
+                <a href="../other_components/db_operation.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../other_components/python_runner.html">
+            
+                <a href="../other_components/python_runner.html">
+            
+                    
+                    Python运行器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >fd_watcher</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="fdwatcher">fd_watcher</h1>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#fd_watcher">fd_watcher</a><ul>
+<li><a href="#fd_watcher&#x7EC4;&#x4EF6;">fd_watcher&#x7EC4;&#x4EF6;</a></li>
+<li><a href="#&#x521B;&#x5EFA;&#x548C;&#x91CA;&#x653E;fd_watcher">&#x521B;&#x5EFA;&#x548C;&#x91CA;&#x653E;fd_watcher</a></li>
+<li><a href="#&#x542F;&#x52A8;&#x548C;&#x505C;&#x6B62;fd_watcher">&#x542F;&#x52A8;&#x548C;&#x505C;&#x6B62;fd_watcher</a></li>
+<li><a href="#fd_watcher&#x7684;&#x5B9E;&#x73B0;">fd_watcher&#x7684;&#x5B9E;&#x73B0;</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+<hr>
+<h2 id="fdwatcher&#x7EC4;&#x4EF6;">fd_watcher&#x7EC4;&#x4EF6;</h2>
+<p>&#x548C;timer&#x7C7B;&#x4F3C;&#xFF0C;fd_watcher&#x7EC4;&#x4EF6;&#x4E5F;&#x5305;&#x542B;&#x5728;module&#x7684;&#x57FA;&#x672C;&#x529F;&#x80FD;&#x4E2D;&#xFF0C;&#x65E0;&#x987B;&#x5305;&#x542B;&#x989D;&#x5916;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x3002;</p>
+<p>fd_watcher&#xFF0C;&#x987E;&#x540D;&#x601D;&#x4E49;&#x662F;&#x76D1;&#x63A7;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x7684;&#x7EC4;&#x4EF6;&#x3002;&#x5728;RMU3.0&#x4E2D;&#xFF0C;fd_watcher&#x6709;&#x4E14;&#x4EC5;&#x6709;&#x4E00;&#x79CD;&#x7528;&#x6CD5;&#xFF0C;&#x5373;&#x7ED9;&#x5B9A;&#x8981;&#x76D1;&#x63A7;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x548C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x8BE5;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x6307;&#x5411;&#x7684;&#x6587;&#x4EF6;&#x53EF;&#x8BFB;&#x65F6;&#xFF0C;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<h2 id="&#x521B;&#x5EFA;&#x548C;&#x91CA;&#x653E;fdwatcher">&#x521B;&#x5EFA;&#x548C;&#x91CA;&#x653E;fd_watcher</h2>
+<p>&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;fd_watcher&#xFF1A;</p>
+<p><code>test_module.h</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> TestModule : <span class="hljs-keyword">public</span> RtuModule
+{
+    STANDARD_RTU_MODULE(TestModule);
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">TestFdCB</span><span class="hljs-params">(<span class="hljs-keyword">int</span>)</span></span>;
+    Watcher *_test_fd_watcher;
+};
+</code></pre>
+<p><code>test_module.cc</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">void</span> TestModule::TestFdCB(<span class="hljs-keyword">int</span> fd)
+{
+    dbg(<span class="hljs-string">&quot;fd watcher callback&quot;</span>);
+}
+
+<span class="hljs-keyword">int</span> TestModule::init()
+{
+    <span class="hljs-keyword">int</span> fd = open(...);
+    init_fdwatcher(_test_fd_watcher, TestModule::TestFdCB, fd);
+
+    <span class="hljs-keyword">return</span> kRetOK;
+}
+
+<span class="hljs-keyword">void</span> TestModule::deinit()
+{
+    <span class="hljs-keyword">if</span> (_test_fd_watcher)
+        <span class="hljs-keyword">delete</span> _test_fd_watcher;
+}
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x4FDD;&#x5B58;fd_watcher&#x7684;&#x5B9E;&#x4F53;&#xFF0C;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;<code>Watcher*</code>&#x6307;&#x9488;&#x53D8;&#x91CF;&#xFF0C;<code>Watcher</code>&#x662F;timer&#x3001;event_watcher&#x3001;fd_watcher&#x7684;&#x5171;&#x540C;&#x57FA;&#x7C7B;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4F7F;&#x7528;&#x5B8F;&#xFF1A;</p>
+<pre><code class="lang-cpp">init_fdwatcher(watcher, callback, fd)
+</code></pre>
+<p>&#x6765;&#x5FEB;&#x901F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;fd_watcher&#xFF0C;&#x5176;&#x4E2D;&#xFF0C;<code>watcher</code>&#x4E3A;<code>Watcher*</code>&#x53D8;&#x91CF;&#xFF0C;<code>callback</code>&#x4E3A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5177;&#x6709;void (*f)(int)&#x7684;&#x5F62;&#x5F0F;&#xFF0C;<code>fd</code>&#x4E3A;&#x8981;&#x76D1;&#x63A7;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x3002;</p>
+<p>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x67D0;&#x4E00;module&#x7684;<strong>&#x6210;&#x5458;&#x51FD;&#x6570;</strong>&#x3002;&#x6B64;&#x51FD;&#x6570;&#x672C;&#x8EAB;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7279;&#x6B8A;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x53EF;&#x4EE5;&#x58F0;&#x660E;&#x4E3A;public&#x6216;&#x8005;private&#xFF0C;&#x90FD;&#x4E0D;&#x5F71;&#x54CD;&#x6846;&#x67B6;&#x6B63;&#x786E;&#x8C03;&#x7528;&#x5B83;&#x3002;&#x6B64;&#x51FD;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x50CF;&#x4E00;&#x4E2A;&#x6B63;&#x5E38;&#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;&#x4E00;&#x6837;&#xFF0C;&#x8BBF;&#x95EE;module&#x672C;&#x8EAB;&#x7684;&#x4EFB;&#x4F55;&#x79C1;&#x6709;&#x6210;&#x5458;&#x3002;</p>
+<p>&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53EA;&#x6709;&#x4E00;&#x4E2A;<code>int</code>&#x53C2;&#x6570;&#xFF0C;&#x5373;&#x8BE5;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x3002;</p>
+<p>&#x5927;&#x90E8;&#x5206;&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x613F;&#x610F;&#x628A;fd_watcher&#x7684;&#x521D;&#x59CB;&#x5316;&#x653E;&#x5728;module&#x7684;<code>init()</code>&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x800C;&#x6B64;&#x65F6;&#xFF0C;&#x8981;&#x76D1;&#x63A7;&#x7684;fd&#x4E0D;&#x4E00;&#x5B9A;&#x5DF2;&#x77E5;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;-1&#x4F5C;&#x4E3A;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x6765;&#x521D;&#x59CB;&#x5316;fd_watcher&#xFF0C;&#x5728;&#x83B7;&#x53D6;&#x771F;&#x6B63;&#x8981;&#x76D1;&#x542C;&#x7684;fd&#x4E4B;&#x540E;&#x4F7F;&#x7528;Listen()&#x63A5;&#x53E3;&#x6765;&#x7ED1;&#x5B9A;&#x65B0;&#x7684;fd&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-cpp">(<span class="hljs-keyword">reinterpret_cast</span>&lt;FdWatcher*&gt;(_test_fd_watcher))-&gt;Listen(fd);
+</code></pre>
+<h2 id="&#x542F;&#x52A8;&#x548C;&#x505C;&#x6B62;fdwatcher">&#x542F;&#x52A8;&#x548C;&#x505C;&#x6B62;fd_watcher</h2>
+<p>&#x5F53;fd_watcher&#x88AB;&#x521B;&#x5EFA;&#x5B8C;&#x6BD5;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;module&#x7684;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#x4F7F;&#x7528;<code>Start()</code>&#x63A5;&#x53E3;&#x542F;&#x52A8;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;<code>Stop()</code>&#x63A5;&#x53E3;&#x505C;&#x6B62;&#x3002;</p>
+<pre><code class="lang-cpp">_test_fd_watcher-&gt;Start();
+_test_fd_watcher-&gt;Stop();
+</code></pre>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x51FD;&#x6570;&#x5747;&#x53EF;&#x91CD;&#x590D;&#x8C03;&#x7528;&#xFF0C;&#x5982;&#x679C;&#x5728;timer&#x5DF2;&#x7ECF;start&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x7EE7;&#x7EED;&#x8C03;&#x7528;<code>Start()</code>&#xFF0C;&#x6216;&#x8005;&#x5728;&#x5DF2;&#x7ECF;stop&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x7EE7;&#x7EED;&#x8C03;&#x7528;<code>Stop()</code>&#xFF0C;&#x5747;&#x4E0D;&#x4F1A;&#x6709;&#x4EFB;&#x4F55;&#x52A8;&#x4F5C;&#x3002;</p>
+<h2 id="fdwatcher&#x7684;&#x5B9E;&#x73B0;">fd_watcher&#x7684;&#x5B9E;&#x73B0;</h2>
+<p>&#x548C;timer&#x7C7B;&#x4F3C;&#xFF0C;fd_watcher&#x4E5F;&#x662F;&#x57FA;&#x4E8E;libev&#x63D0;&#x4F9B;&#x7684;&#x7EC4;&#x4EF6;<code>ev_io</code>&#x5B9E;&#x73B0;&#x3002;&#x5177;&#x4F53;&#x7EC6;&#x8282;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x53C2;&#x9605;libev&#x7684;&#x76F8;&#x5173;&#x6587;&#x6863;&#x3002;</p>
+<p>&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;</p>
+<ul>
+<li><code>ev_io</code>&#x672C;&#x8EAB;&#x63D0;&#x4F9B;&#x4E24;&#x79CD;&#x76D1;&#x63A7;&#x529F;&#x80FD;&#xFF0C;&#x5373;&#x53EF;&#x8BFB;&#x65F6;&#x56DE;&#x8C03;&#x6216;&#x53EF;&#x5199;&#x65F6;&#x56DE;&#x8C03;&#xFF0C;&#x5728;RMU3.0&#x6846;&#x67B6;&#x4E2D;&#xFF0C;&#x53EA;&#x4F7F;&#x7528;&#x4E86;&#x53EF;&#x8BFB;&#x56DE;&#x8C03;&#xFF0C;&#x8FD9;&#x5DF2;&#x7ECF;&#x8986;&#x76D6;&#x4E86;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x76D1;&#x63A7;&#x7684;&#x4E00;&#x822C;&#x573A;&#x666F;&#xFF1B;</li>
+<li><code>ev_io</code>&#x6709;&#x65F6;&#x5019;&#x4F1A;&#x201C;&#x8BEF;&#x62A5;&#x201D;&#xFF0C;&#x4E5F;&#x5373;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x6CA1;&#x6709;&#x53EF;&#x8BFB;&#x6570;&#x636E;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x7EC6;&#x5FC3;&#x8BBE;&#x8BA1;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7684;&#x5185;&#x5BB9;&#x4EE5;&#x5904;&#x7406;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF1B;</li>
+<li>&#x6839;&#x636E;libev&#x7F16;&#x7A0B;&#x7684;&#x6307;&#x5BFC;&#x601D;&#x60F3;&#xFF0C;&#x4E5F;&#x5373;&#x6240;&#x6709;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x90FD;&#x4E0D;&#x80FD;&#x957F;&#x65F6;&#x95F4;&#x963B;&#x585E;&#xFF0C;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x628A;&#x88AB;&#x76D1;&#x63A7;&#x7684;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#x7B26;&#x8BBE;&#x4E3A;<strong>&#x975E;&#x963B;&#x585E;</strong>&#x65B9;&#x5F0F;&#x8BFB;&#x53D6;&#x3002;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="timer.html" class="navigation navigation-prev " aria-label="Previous page: timer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="event/create_and_send_event.html" class="navigation navigation-next " aria-label="Next page: 创建和发送event">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"fd_watcher","level":"3.2","depth":1,"next":{"title":"创建和发送event","level":"4.1","depth":1,"path":"watchers/event/create_and_send_event.md","ref":"watchers/event/create_and_send_event.md","articles":[]},"previous":{"title":"timer","level":"3.1","depth":1,"path":"watchers/timer.md","ref":"watchers/timer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-pro","-lunr"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ziping.he","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"watchers/fd_watcher.md","mtime":"2020-01-08T01:30:56.404Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T10:12:29.364Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

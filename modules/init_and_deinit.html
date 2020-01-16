@@ -1,0 +1,571 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>初始化和反初始化 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ziping.he">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="add_function.html" />
+    
+    
+    <link rel="prev" href="define_a_module.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part 0. 概述</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../abstract/compile_and_run.html">
+            
+                <a href="../abstract/compile_and_run.html">
+            
+                    
+                    编译和运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../abstract/config_files.html">
+            
+                <a href="../abstract/config_files.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1. Module</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="define_a_module.html">
+            
+                <a href="define_a_module.html">
+            
+                    
+                    定义module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2" data-path="init_and_deinit.html">
+            
+                <a href="init_and_deinit.html">
+            
+                    
+                    初始化和反初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="add_function.html">
+            
+                <a href="add_function.html">
+            
+                    
+                    为module添加功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2. Timer & Fd Watcher</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../watchers/timer.html">
+            
+                <a href="../watchers/timer.html">
+            
+                    
+                    timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../watchers/fd_watcher.html">
+            
+                <a href="../watchers/fd_watcher.html">
+            
+                    
+                    fd_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3. Event</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../watchers/event/create_and_send_event.html">
+            
+                <a href="../watchers/event/create_and_send_event.html">
+            
+                    
+                    创建和发送event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../watchers/event/event_watcher.html">
+            
+                <a href="../watchers/event/event_watcher.html">
+            
+                    
+                    event_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../watchers/event/event_trans_model.html">
+            
+                <a href="../watchers/event/event_trans_model.html">
+            
+                    
+                    event收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../watchers/event/matrix_link.html">
+            
+                <a href="../watchers/event/matrix_link.html">
+            
+                    
+                    跨进程event
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Data</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../watchers/data/create_and_send_data.html">
+            
+                <a href="../watchers/data/create_and_send_data.html">
+            
+                    
+                    创建和发送data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../watchers/data/data_watcher.html">
+            
+                <a href="../watchers/data/data_watcher.html">
+            
+                    
+                    data_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../watchers/data/data_trans_model.html">
+            
+                <a href="../watchers/data/data_trans_model.html">
+            
+                    
+                    data收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Other Components</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../other_components/log.html">
+            
+                <a href="../other_components/log.html">
+            
+                    
+                    日志功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../other_components/config_rw.html">
+            
+                <a href="../other_components/config_rw.html">
+            
+                    
+                    配置读写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../other_components/string_handling.html">
+            
+                <a href="../other_components/string_handling.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../other_components/lock.html">
+            
+                <a href="../other_components/lock.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../other_components/db_operation.html">
+            
+                <a href="../other_components/db_operation.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../other_components/python_runner.html">
+            
+                <a href="../other_components/python_runner.html">
+            
+                    
+                    Python运行器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >初始化和反初始化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;</h1>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;</a><ul>
+<li><a href="#init&#x63A5;&#x53E3;">init()&#x63A5;&#x53E3;</a></li>
+<li><a href="#deinit&#x63A5;&#x53E3;">deinit()&#x63A5;&#x53E3;</a></li>
+<li><a href="#module&#x7684;&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;">module&#x7684;&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+<hr>
+<h2 id="init&#x63A5;&#x53E3;">init()&#x63A5;&#x53E3;</h2>
+<p>&#x5728;module&#x52A0;&#x8F7D;&#x65F6;&#xFF0C;&#x4F1A;&#x6267;&#x884C;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#xFF0C;&#x5177;&#x4F53;&#x4E3A;&#x6267;&#x884C;&#x8BE5;module&#x7684;<code>init()</code>&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;init&#x51FD;&#x6570;&#x4E2D;&#x6267;&#x884C;&#x81EA;&#x8EAB;&#x7684;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p><code>TestModule.h</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> TestModule : <span class="hljs-keyword">public</span> RtuModule
+{
+    STANDARD_RTU_MODULE(TestModule);
+<span class="hljs-keyword">private</span>:
+    <span class="hljs-keyword">char</span> *_data;
+    <span class="hljs-keyword">int</span> *_sock;
+};
+</code></pre>
+<p><code>TestModule.cc</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> TestModule::init()
+{
+    _sock = <span class="hljs-number">-1</span>;
+    _data = <span class="hljs-keyword">new</span> <span class="hljs-keyword">char</span>[<span class="hljs-number">256</span>];
+    <span class="hljs-keyword">return</span> kRetOK;
+}
+</code></pre>
+<p>&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;</p>
+<ul>
+<li><code>init()</code>&#x51FD;&#x6570;&#x4E2D;&#x4E0D;&#x53EF;&#x53D1;&#x9001;event&#x3001;data&#xFF0C;&#x5728;<code>init()</code>&#x51FD;&#x6570;&#x4E2D;&#x53D1;&#x9001;event&#x6216;&#x8005;data&#x4F1A;&#x9020;&#x6210;&#x672A;&#x77E5;&#x7ED3;&#x679C;&#xFF0C;&#x4E14;&#x80AF;&#x5B9A;&#x4E0D;&#x4F1A;&#x6B63;&#x786E;&#x5730;&#x53D1;&#x9001;&#x5230;&#x6240;&#x6709;&#x63A5;&#x6536;&#x7AEF;&#xFF1B;</li>
+<li><code>init()</code>&#x51FD;&#x6570;&#x4E0D;&#x5E94;&#x8BE5;&#x957F;&#x65F6;&#x95F4;&#x963B;&#x585E;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5F71;&#x54CD;&#x5176;&#x4ED6;module&#x7684;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#xFF1B;</li>
+<li>&#x5982;&#x679C;&#x521D;&#x59CB;&#x5316;&#x6210;&#x529F;&#xFF0C;&#x8FD4;&#x56DE;<code>kRetOK</code>&#xFF0C;&#x5426;&#x5219;&#x8FD4;&#x56DE;&#x4EFB;&#x610F;&#x7684;<code>kErrXXX</code>&#xFF0C;&#x8FD9;&#x4F1A;&#x8BA9;&#x6846;&#x67B6;&#x653E;&#x5F03;&#x6B64;&#x6A21;&#x5757;&#x7684;&#x52A0;&#x8F7D;&#x3002;&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x6B64;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4E0D;&#x4F1A;&#x6267;&#x884C;<code>deinit()</code>&#xFF1B;</li>
+</ul>
+<h2 id="deinit&#x63A5;&#x53E3;">deinit()&#x63A5;&#x53E3;</h2>
+<p>&#x540C;&#x6837;&#x9053;&#x7406;&#xFF0C;&#x5728;module&#x88AB;&#x9500;&#x6BC1;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x7A0B;&#x5E8F;&#x7ED3;&#x675F;&#x6267;&#x884C;&#xFF0C;&#x6216;&#x8005;&#x9047;&#x5230;&#x4FE1;&#x53F7;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#xFF09;&#x65F6;&#xFF0C;&#x4F1A;&#x6267;&#x884C;<code>deinit()</code>&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4F60;&#x5E94;&#x8BE5;&#x5728;deinit()&#x51FD;&#x6570;&#x4E2D;&#x9500;&#x6BC1;&#x6240;&#x6709;&#x7531;&#x81EA;&#x5DF1;&#x7BA1;&#x7406;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p><code>TestModule.cc</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">void</span> TestModule::deinit()
+{
+    <span class="hljs-keyword">delete</span> _data;
+}
+</code></pre>
+<p>&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;deinit()&#x51FD;&#x6570;&#x4E0D;&#x53EF;&#x957F;&#x65F6;&#x95F4;&#x963B;&#x585E;&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5F71;&#x54CD;&#x7A0B;&#x5E8F;&#x7684;&#x6B63;&#x5E38;&#x9000;&#x51FA;&#x3002;&#x5982;&#x679C;&#x5728;<code>deinit()</code>&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x67D0;&#x9879;&#x64CD;&#x4F5C;&#x53EF;&#x80FD;&#x5931;&#x8D25;&#xFF0C;&#x5E94;&#x8BBE;&#x5B9A;&#x4E00;&#x4E2A;&#x6700;&#x5927;&#x7684;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x76F4;&#x91CD;&#x590D;&#x5C1D;&#x8BD5;&#x3002;</p>
+<h2 id="module&#x7684;&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;">module&#x7684;&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;</h2>
+<p>&#x6BCF;&#x6B21;RMU&#x542F;&#x52A8;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x82E5;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x540C;&#x4E00;&#x4EFD;&#x914D;&#x7F6E;&#xFF0C;&#x5219;&#x521D;&#x59CB;&#x5316;&#x51FD;&#x6570;&#x7684;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x4F46;<strong>&#x4E0D;&#x8981;&#x8BD5;&#x56FE;&#x5229;&#x7528;&#x8FD9;&#x4E00;&#x70B9;</strong>&#x3002;</p>
+<p>&#x540C;&#x7406;&#xFF0C;&#x9500;&#x6BC1;&#x7684;&#x987A;&#x5E8F;&#x4E5F;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x3002;</p>
+<p>&#x521D;&#x59CB;&#x5316;&#x548C;&#x53CD;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x5747;&#x4E3A;&#x5355;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#xFF1A;</p>
+<ul>
+<li>&#x82E5;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x5F00;&#x59CB;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#x9996;&#x5148;&#x4F1A;&#x987A;&#x5E8F;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x7684;module&#xFF0C;&#x5E76;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C55;&#x5F00;&#x4E1A;&#x52A1;&#x7EBF;&#x7A0B;&#xFF1B;</li>
+<li>&#x82E5;&#x53CD;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#x5F00;&#x59CB;&#xFF0C;&#x6846;&#x67B6;&#x9996;&#x5148;&#x4F1A;&#x901A;&#x77E5;&#x4E3B;&#x7EBF;&#x7A0B;&#xFF0C;&#x4E3B;&#x7EBF;&#x7A0B;&#xFF08;&#x8BD5;&#x56FE;&#xFF09;&#x56DE;&#x6536;&#x6240;&#x6709;&#x7684;&#x4E1A;&#x52A1;&#x7EBF;&#x7A0B;&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x53CD;&#x521D;&#x59CB;&#x5316;&#x8FC7;&#x7A0B;&#xFF1B;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="define_a_module.html" class="navigation navigation-prev " aria-label="Previous page: 定义module">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="add_function.html" class="navigation navigation-next " aria-label="Next page: 为module添加功能">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"初始化和反初始化","level":"2.2","depth":1,"next":{"title":"为module添加功能","level":"2.3","depth":1,"path":"modules/add_function.md","ref":"modules/add_function.md","articles":[]},"previous":{"title":"定义module","level":"2.1","depth":1,"path":"modules/define_a_module.md","ref":"modules/define_a_module.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-pro","-lunr"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ziping.he","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"modules/init_and_deinit.md","mtime":"2020-01-07T08:31:33.253Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T10:12:29.364Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

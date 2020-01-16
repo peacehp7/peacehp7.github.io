@@ -1,0 +1,523 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>data收发模型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ziping.he">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../other_components/log.html" />
+    
+    
+    <link rel="prev" href="data_watcher.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part 0. 概述</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../abstract/compile_and_run.html">
+            
+                <a href="../../abstract/compile_and_run.html">
+            
+                    
+                    编译和运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../abstract/config_files.html">
+            
+                <a href="../../abstract/config_files.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1. Module</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../modules/define_a_module.html">
+            
+                <a href="../../modules/define_a_module.html">
+            
+                    
+                    定义module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../modules/init_and_deinit.html">
+            
+                <a href="../../modules/init_and_deinit.html">
+            
+                    
+                    初始化和反初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../modules/add_function.html">
+            
+                <a href="../../modules/add_function.html">
+            
+                    
+                    为module添加功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2. Timer & Fd Watcher</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../timer.html">
+            
+                <a href="../timer.html">
+            
+                    
+                    timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../fd_watcher.html">
+            
+                <a href="../fd_watcher.html">
+            
+                    
+                    fd_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3. Event</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../event/create_and_send_event.html">
+            
+                <a href="../event/create_and_send_event.html">
+            
+                    
+                    创建和发送event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../event/event_watcher.html">
+            
+                <a href="../event/event_watcher.html">
+            
+                    
+                    event_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../event/event_trans_model.html">
+            
+                <a href="../event/event_trans_model.html">
+            
+                    
+                    event收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../event/matrix_link.html">
+            
+                <a href="../event/matrix_link.html">
+            
+                    
+                    跨进程event
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Data</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="create_and_send_data.html">
+            
+                <a href="create_and_send_data.html">
+            
+                    
+                    创建和发送data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="data_watcher.html">
+            
+                <a href="data_watcher.html">
+            
+                    
+                    data_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.3" data-path="data_trans_model.html">
+            
+                <a href="data_trans_model.html">
+            
+                    
+                    data收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Other Components</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../other_components/log.html">
+            
+                <a href="../../other_components/log.html">
+            
+                    
+                    日志功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../other_components/config_rw.html">
+            
+                <a href="../../other_components/config_rw.html">
+            
+                    
+                    配置读写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../other_components/string_handling.html">
+            
+                <a href="../../other_components/string_handling.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../other_components/lock.html">
+            
+                <a href="../../other_components/lock.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../other_components/db_operation.html">
+            
+                <a href="../../other_components/db_operation.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../other_components/python_runner.html">
+            
+                <a href="../../other_components/python_runner.html">
+            
+                    
+                    Python运行器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >data收发模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="data&#x6536;&#x53D1;&#x6A21;&#x578B;">data&#x6536;&#x53D1;&#x6A21;&#x578B;</h1>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#data&#x6536;&#x53D1;&#x6A21;&#x578B;">data&#x6536;&#x53D1;&#x6A21;&#x578B;</a></li>
+</ul>
+<!-- /code_chunk_output -->
+<hr>
+<p>TODO</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="data_watcher.html" class="navigation navigation-prev " aria-label="Previous page: data_watcher">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../other_components/log.html" class="navigation navigation-next " aria-label="Next page: 日志功能">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"data收发模型","level":"5.3","depth":1,"next":{"title":"日志功能","level":"6.1","depth":1,"path":"other_components/log.md","ref":"other_components/log.md","articles":[]},"previous":{"title":"data_watcher","level":"5.2","depth":1,"path":"watchers/data/data_watcher.md","ref":"watchers/data/data_watcher.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-pro","-lunr"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ziping.he","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"watchers/data/data_trans_model.md","mtime":"2020-01-14T09:26:50.940Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T10:12:29.364Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

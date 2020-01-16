@@ -1,0 +1,596 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>跨进程event · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ziping.he">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../data/create_and_send_data.html" />
+    
+    
+    <link rel="prev" href="event_trans_model.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part 0. 概述</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../abstract/compile_and_run.html">
+            
+                <a href="../../abstract/compile_and_run.html">
+            
+                    
+                    编译和运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../abstract/config_files.html">
+            
+                <a href="../../abstract/config_files.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1. Module</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../modules/define_a_module.html">
+            
+                <a href="../../modules/define_a_module.html">
+            
+                    
+                    定义module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../modules/init_and_deinit.html">
+            
+                <a href="../../modules/init_and_deinit.html">
+            
+                    
+                    初始化和反初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../modules/add_function.html">
+            
+                <a href="../../modules/add_function.html">
+            
+                    
+                    为module添加功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2. Timer & Fd Watcher</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../timer.html">
+            
+                <a href="../timer.html">
+            
+                    
+                    timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../fd_watcher.html">
+            
+                <a href="../fd_watcher.html">
+            
+                    
+                    fd_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3. Event</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="create_and_send_event.html">
+            
+                <a href="create_and_send_event.html">
+            
+                    
+                    创建和发送event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="event_watcher.html">
+            
+                <a href="event_watcher.html">
+            
+                    
+                    event_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="event_trans_model.html">
+            
+                <a href="event_trans_model.html">
+            
+                    
+                    event收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="matrix_link.html">
+            
+                <a href="matrix_link.html">
+            
+                    
+                    跨进程event
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Data</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../data/create_and_send_data.html">
+            
+                <a href="../data/create_and_send_data.html">
+            
+                    
+                    创建和发送data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../data/data_watcher.html">
+            
+                <a href="../data/data_watcher.html">
+            
+                    
+                    data_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../data/data_trans_model.html">
+            
+                <a href="../data/data_trans_model.html">
+            
+                    
+                    data收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Other Components</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../other_components/log.html">
+            
+                <a href="../../other_components/log.html">
+            
+                    
+                    日志功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../other_components/config_rw.html">
+            
+                <a href="../../other_components/config_rw.html">
+            
+                    
+                    配置读写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../other_components/string_handling.html">
+            
+                <a href="../../other_components/string_handling.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../other_components/lock.html">
+            
+                <a href="../../other_components/lock.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../other_components/db_operation.html">
+            
+                <a href="../../other_components/db_operation.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../other_components/python_runner.html">
+            
+                <a href="../../other_components/python_runner.html">
+            
+                    
+                    Python运行器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >跨进程event</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x8DE8;&#x8FDB;&#x7A0B;event">&#x8DE8;&#x8FDB;&#x7A0B;event</h1>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#&#x8DE8;&#x8FDB;&#x7A0B;event">&#x8DE8;&#x8FDB;&#x7A0B;event</a><ul>
+<li><a href="#&#x8DE8;&#x8FDB;&#x7A0B;event&#x7EC4;&#x4EF6;">&#x8DE8;&#x8FDB;&#x7A0B;event&#x7EC4;&#x4EF6;</a></li>
+<li><a href="#&#x516C;&#x5171;event&#x7684;&#x521B;&#x5EFA;">&#x516C;&#x5171;event&#x7684;&#x521B;&#x5EFA;</a></li>
+<li><a href="#module-matrixlink">Module MatrixLink</a></li>
+<li><a href="#&#x516C;&#x5171;event&#x7684;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;">&#x516C;&#x5171;event&#x7684;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;</a></li>
+<li><a href="#&#x516C;&#x5171;event&#x6536;&#x53D1;&#x6A21;&#x578B;">&#x516C;&#x5171;event&#x6536;&#x53D1;&#x6A21;&#x578B;</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+<hr>
+<h2 id="&#x8DE8;&#x8FDB;&#x7A0B;event&#x7EC4;&#x4EF6;">&#x8DE8;&#x8FDB;&#x7A0B;event&#x7EC4;&#x4EF6;</h2>
+<p>&#x8DE8;&#x8FDB;&#x7A0B;event&#x662F;RMU3.0&#x6846;&#x67B6;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x5B83;&#x6269;&#x5C55;&#x4E86;event&#x7684;&#x4F20;&#x64AD;&#x8303;&#x56F4;&#xFF0C;&#x4F7F;&#x5F97;&#x4E00;&#x4E2A;event&#x4E0D;&#x4EC5;&#x4EC5;&#x53EF;&#x4EE5;&#x5728;RMU3.0&#x7684;module&#x4E4B;&#x95F4;&#x4F20;&#x64AD;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x88AB;&#x5176;&#x5B83;&#x540C;&#x6837;&#x8FD0;&#x884C;RMU3.0&#x6846;&#x67B6;&#x7684;&#x8FDB;&#x7A0B;&#x63A5;&#x6536;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;RMU&#xFF0C;&#x4E00;&#x4E2A;&#x57FA;&#x672C;&#x7684;&#x8BA4;&#x77E5;&#x662F;&#x5B83;&#x5305;&#x542B;&#x8BB8;&#x591A;&#x7684;module&#xFF0C;&#x6BCF;&#x4E2A;module&#x8D1F;&#x8D23;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;&#x6A21;&#x5757;&#x3002;&#x663E;&#x7136;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x529F;&#x80FD;&#x4E4B;&#x95F4;&#x7A33;&#x5B9A;&#x6027;&#x3001;&#x91CD;&#x8981;&#x7A0B;&#x5EA6;&#x3001;&#x8026;&#x5408;&#x5EA6;&#x662F;&#x4E0D;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#x7BA1;&#x7406;&#x7F51;&#x7EDC;&#x8FDE;&#x63A5;&#x7684;module&#x7A33;&#x5B9A;&#x6027;&#x51E0;&#x4E4E;&#x80AF;&#x5B9A;&#x8981;&#x5F3A;&#x4E8E;&#x91C7;&#x96C6;&#x89C6;&#x9891;&#x7684;module&#x3002;</p>
+<p>&#x8FD9;&#x4FC3;&#x4F7F;&#x6211;&#x4EEC;&#x601D;&#x8003;&#x5982;&#x4F55;&#x907F;&#x514D;&#x4E00;&#x4E2A;&#x4E0D;&#x7A33;&#x5B9A;&#x7684;module&#x5F71;&#x54CD;&#x539F;&#x672C;&#x7A33;&#x5B9A;&#x7684;module&#x2014;&#x2014;&#x5728;module&#x8FD0;&#x884C;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x65F6;&#xFF0C;&#x51E0;&#x4E4E;&#x4E00;&#x5B9A;&#x4F1A;&#x5BFC;&#x81F4;&#x6574;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x5D29;&#x6E83;&#x3002;&#x90A3;&#x4E48;&#x663E;&#x7136;&#x7684;&#x89E3;&#x6CD5;&#x662F;&#x5212;&#x5206;&#x591A;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x4E00;&#x7EC4;&#x529F;&#x80FD;&#x76F8;&#x5173;&#x7684;module&#xFF0C;&#x4F8B;&#x5982;&#x4E00;&#x79CD;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5212;&#x5206;&#x65B9;&#x5F0F;&#xFF0C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x8D1F;&#x8D23;&#x57FA;&#x7840;&#x7CFB;&#x7EDF;&#x529F;&#x80FD;&#x4FDD;&#x969C;&#x2014;&#x2014;&#x7F51;&#x7EDC;&#x3001;&#x6838;&#x95F4;&#x901A;&#x4FE1;&#x3001;&#x7535;&#x6E90;&#x7BA1;&#x7406;&#x7B49;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x8D1F;&#x8D23;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x2014;&#x2014;&#x8BA1;&#x7B97;&#x3001;&#x91C7;&#x96C6;&#x3001;&#x5904;&#x7406;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x591A;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x4E00;&#x5B9A;&#x8981;&#x6709;&#x4E00;&#x79CD;&#x4E92;&#x76F8;&#x901A;&#x4FE1;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5E94;&#x8BE5;&#x5177;&#x6709;&#x4EE5;&#x4E0B;&#x7279;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x9AD8;&#x6548;&#xFF0C;&#x4E0D;&#x590D;&#x6742;&#xFF1B;</li>
+<li>&#x53EA;&#x643A;&#x5E26;&#x6781;&#x5C11;&#x91CF;&#x6570;&#x636E;&#x2014;&#x2014;&#x5BF9;&#x4E8E;&#x6D89;&#x53CA;&#x5927;&#x91CF;&#x6570;&#x636E;&#x4EA4;&#x4E92;&#x7684;module&#xFF0C;&#x6BEB;&#x65E0;&#x7591;&#x95EE;&#x5E94;&#x8BE5;&#x653E;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x4ED6;&#x4EEC;&#x53EF;&#x4EE5;&#x9AD8;&#x6548;&#x5730;&#x5171;&#x4EAB;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x5BF9;&#x4E8E;&#x4E00;&#x822C;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x5E94;&#x8BE5;&#x5C3D;&#x53EF;&#x80FD;&#x7B80;&#x4FBF;&#xFF1B;</li>
+</ul>
+<p>&#x8DE8;&#x8FDB;&#x7A0B;event&#x6B63;&#x662F;&#x57FA;&#x4E8E;&#x4EE5;&#x4E0A;&#x7684;&#x8003;&#x8651;&#x800C;&#x8BDE;&#x751F;&#x7684;&#x65B0;&#x7EC4;&#x4EF6;&#x3002;&#x5B83;&#x4F7F;&#x7528;&#x4E86;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#xFF0C;&#x5728;RMU3.0&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x9AD8;&#x6548;&#x5730;&#xFF08;&#x53EA;&#x662F;&#x76F8;&#x5BF9;&#x7684;&#xFF0C;&#x5C3D;&#x7BA1;&#x6211;&#x8FD9;&#x4E48;&#x8BF4;&#xFF0C;&#x4F60;&#x4ECD;&#x7136;&#x4E0D;&#x5E94;&#x8BE5;&#x8BA9;&#x8DE8;&#x8FDB;&#x7A0B;event&#x643A;&#x5E26;&#x5927;&#x91CF;&#x6570;&#x636E;&#xFF09;&#x6536;&#x53D1;&#x4E8B;&#x4EF6;&#xFF0C;&#x5B83;&#x6709;&#x5982;&#x4E0B;&#x7279;&#x6027;&#xFF1A;</p>
+<ul>
+<li>&#x81EA;&#x52A8;&#x6CE8;&#x518C;&#x548C;&#x53CD;&#x6CE8;&#x518C;&#xFF1A;&#x5F53;RMU&#x542F;&#x52A8;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x5730;&#x5BFB;&#x627E;&#x5F53;&#x524D;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x7684;&#x5176;&#x5B83;RMU&#x8FDB;&#x7A0B;&#xFF0C;&#x5E76;&#x5EFA;&#x7ACB;&#x901A;&#x4FE1;&#xFF1B;&#x81EA;&#x52A8;&#x5730;&#x5904;&#x7406;&#x5176;&#x5B83;RMU&#x8FDB;&#x7A0B;&#x7684;&#x52A0;&#x5165;&#x548C;&#x79BB;&#x5F00;&#xFF1B;</li>
+<li>&#x5212;&#x5206;&#x79C1;&#x6709;event&#x548C;&#x516C;&#x5171;event&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x5E0C;&#x671B;&#x8FD9;&#x4E2A;event&#x88AB;&#x8DE8;&#x8FDB;&#x7A0B;&#x4F20;&#x64AD;&#xFF0C;&#x6216;&#x8005;&#x4E0D;&#x5E0C;&#x671B;&#xFF0C;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x505A;&#x5230;&#x7684;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;&#x4FBF;&#x5229;&#xFF0C;&#x548C;&#x4E00;&#x822C;&#x7684;event&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x533A;&#x522B;&#xFF1B;</li>
+</ul>
+<p>&#x5B83;&#x8FD8;&#x5B58;&#x5728;&#x5982;&#x4E0B;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li>&#x4E0D;&#x5177;&#x5907;&#x7528;&#x8DE8;&#x8FDB;&#x7A0B;event&#x4F20;&#x8F93;&#x5927;&#x91CF;&#x6570;&#x636E;&#x7684;&#x80FD;&#x529B;&#xFF1B;</li>
+<li>&#x4E0D;&#x540C;RMU&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x516C;&#x5171;event&#x5217;&#x8868;&#x9700;&#x8981;&#x7EDF;&#x4E00;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x9700;&#x8981;&#x8DE8;&#x9879;&#x76EE;&#x7EF4;&#x62A4;&#x4E00;&#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#xFF1B;</li>
+</ul>
+<h2 id="&#x516C;&#x5171;event&#x7684;&#x521B;&#x5EFA;">&#x516C;&#x5171;event&#x7684;&#x521B;&#x5EFA;</h2>
+<p>&#x516C;&#x5171;event&#x662F;&#x6307;&#x7528;&#x4E8E;&#x8DE8;&#x8FDB;&#x7A0B;&#x4F20;&#x64AD;&#x7684;event&#x3002;&#x5982;&#x679C;&#x4F60;&#x5728;module&#x5185;&#x53D1;&#x9001;&#x4E86;&#x4E00;&#x4E2A;&#x516C;&#x5171;event&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x4F20;&#x64AD;&#x5230;&#x7CFB;&#x7EDF;&#x4E2D;&#x6240;&#x6709;&#x7684;RMU3.0&#x8FDB;&#x7A0B;&#xFF1B;&#x5982;&#x679C;&#x4F60;&#x5728;module&#x5185;&#x76D1;&#x542C;&#x4E86;&#x4E00;&#x4E2A;&#x516C;&#x5171;event&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x80FD;&#x6536;&#x5230;&#x4ECE;&#x522B;&#x7684;RMU3.0&#x8FDB;&#x7A0B;&#x53D1;&#x6765;&#x7684;&#x8BE5;event&#x3002;</p>
+<p>&#x521B;&#x5EFA;&#x516C;&#x5171;event&#x548C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x666E;&#x901A;event&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#xFF0C;&#x4F46;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x4F60;&#x9700;&#x8981;&#x5C06;event&#x521B;&#x5EFA;&#x5728;<strong>public/public_events.h</strong>&#x548C;<strong>public/public_events.cc</strong>&#x4E2D;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<p><code>public_events.h</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">enum</span> PublicEventIds {
+    kPublicEventMin, 
+    <span class="hljs-comment">/* Add new events below */</span>
+
+    kPEventTest, 
+
+    <span class="hljs-comment">/* sentinel */</span>
+    kPublicEventMax
+};
+
+<span class="hljs-keyword">struct</span> PEventTest {
+    <span class="hljs-keyword">double</span> sign;
+    <span class="hljs-keyword">int</span> k;
+};
+</code></pre>
+<p><code>public_events.cc</code></p>
+<pre><code class="lang-cpp">REGISTER_PUBLIC_EVENT(kPEventTest, PEventTest);
+</code></pre>
+<p>&#x8981;&#x6CE8;&#x610F;&#xFF0C;&#x516C;&#x5171;event&#x5168;&#x90E8;&#x90FD;&#x643A;&#x5E26;&#x6709;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x4F53;&#xFF0C;&#x800C;&#x4E0D;&#x5B58;&#x5728;&#x7C7B;&#x4F3C;&#x4E8E;module event&#x8FD9;&#x6837;&#x4E0D;&#x643A;&#x5E26;&#x6570;&#x636E;&#x4F53;&#x7684;&#x5206;&#x7C7B;&#x3002;</p>
+<h2 id="module-matrixlink">Module MatrixLink</h2>
+<p>MatrixLink&#x662F;RMU3.0&#x7684;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;module&#xFF0C;&#x5B83;&#x4E3A;RMU3.0&#x63D0;&#x4F9B;&#x8DE8;&#x8FDB;&#x7A0B;&#x901A;&#x4FE1;&#x80FD;&#x529B;&#x3002;</p>
+<p>&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4E2D;&#x628A;MatrixLink&#x6253;&#x5F00;&#xFF0C;RMU3.0&#x5C31;&#x5C06;&#x5177;&#x5907;&#x8DE8;&#x8FDB;&#x7A0B;&#x6536;&#x53D1;event&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x5BF9;&#x4E8E;&#x6BCF;&#x4E00;&#x4E2A;&#x53C2;&#x4E0E;&#x8DE8;&#x8FDB;&#x7A0B;&#x901A;&#x4FE1;&#x7684;RMU3.0&#x8FDB;&#x7A0B;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x6253;&#x5F00;&#x8FD9;&#x4E2A;module&#x3002;</p>
+<pre><code class="lang-sql"><span class="hljs-keyword">INSERT</span> <span class="hljs-keyword">INTO</span> ModuleConfig <span class="hljs-keyword">VALUES</span>(<span class="hljs-string">&apos;MatrixLink&apos;</span>,<span class="hljs-string">&apos;MTL&apos;</span>,<span class="hljs-string">&apos;main&apos;</span>,<span class="hljs-number">1</span>);
+</code></pre>
+<p>&#x53CD;&#x4E4B;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;RMU3.0&#x8FDB;&#x7A0B;&#x4E0D;&#x5E0C;&#x671B;&#x53C2;&#x4E0E;&#x5230;&#x516C;&#x5171;event&#x7684;&#x6536;&#x53D1;&#x4E2D;&#xFF0C;&#x90A3;&#x4E48;&#x53EA;&#x9700;&#x8981;&#x628A;MatrixLink&#x5173;&#x6389;&#x5373;&#x53EF;&#x3002;</p>
+<h2 id="&#x516C;&#x5171;event&#x7684;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;">&#x516C;&#x5171;event&#x7684;&#x53D1;&#x9001;&#x548C;&#x63A5;&#x6536;</h2>
+<p>&#x5BF9;&#x4E8E;module&#x5F00;&#x53D1;&#x8005;&#x6765;&#x8BF4;&#xFF0C;&#x8981;&#x6536;&#x53D1;&#x516C;&#x5171;event&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x50CF;&#x666E;&#x901A;&#x7684;module event&#x6536;&#x53D1;&#x4E00;&#x6837;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x7528;<code>SendEvent()</code>&#x63A5;&#x53E3;&#x53D1;&#x9001;event</li>
+<li>&#x4F7F;&#x7528;event_watcher&#x7EC4;&#x4EF6;&#x63A5;&#x6536;event</li>
+</ul>
+<p>&#x8981;&#x6CE8;&#x610F;&#x548C;&#x4E0A;&#x4E00;&#x5C0F;&#x8282;&#x533A;&#x5206;&#x7684;&#x662F;&#xFF0C;&#x65E0;&#x8BBA;MatrixLink&#x662F;&#x5426;&#x6253;&#x5F00;&#xFF0C;&#x516C;&#x5171;event&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x8FDB;&#x7A0B;&#x5185;&#x90E8;&#x4F20;&#x64AD;&#xFF0C;&#x800C;&#x4E00;&#x65E6;&#x6253;&#x5F00;&#x4E86;MatrixLink&#xFF0C;&#x516C;&#x5171;event&#x5C31;&#x4F1A;&#x4F20;&#x64AD;&#x5230;&#x5176;&#x5B83;RMU3.0&#x8FDB;&#x7A0B;&#x3002;</p>
+<h2 id="&#x516C;&#x5171;event&#x6536;&#x53D1;&#x6A21;&#x578B;">&#x516C;&#x5171;event&#x6536;&#x53D1;&#x6A21;&#x578B;</h2>
+<p>&#x516C;&#x5171;event&#x7684;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x7531;&#x5982;&#x4E0B;&#x6846;&#x56FE;&#x6982;&#x62EC;&#xFF1A;</p>
+<p><img src="matirx-link.png" alt="matirx-link"></p>
+<p>MatrixLink&#x7531;&#x4E24;&#x4E2A;&#x7EBF;&#x7A0B;&#x548C;&#x4E00;&#x5757;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x6784;&#x6210;&#x3002;thread 1&#x4E5F;&#x5373;MatrixLink&#x672C;&#x8EAB;&#x6240;&#x5728;&#x7684;Loop&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x6CE8;&#x518C;event_watcher&#x76D1;&#x542C;&#x6240;&#x6709;&#x7684;public event&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;public event&#x53D1;&#x9001;&#x7ED9;MatrixLink&#x65F6;&#xFF0C;&#x5C06;&#x5176;&#x653E;&#x8FDB;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x5E76;&#x901A;&#x77E5;&#x5176;&#x5B83;&#x5728;&#x76D1;&#x63A7;&#x8FD9;&#x4E2A;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;RMU&#x8FDB;&#x7A0B;&#x53D6;&#x8D70;&#x8BE5;event&#xFF1B;thread 2&#x4E3A;&#x76D1;&#x63A7;&#x7EBF;&#x7A0B;&#xFF0C;&#x5E73;&#x65F6;&#x7B49;&#x5F85;&#x5176;&#x5B83;&#x8FDB;&#x7A0B;&#x5C06;&#x5176;&#x5524;&#x9192;&#xFF0C;&#x4E00;&#x65E6;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x5C06;&#x5C1D;&#x8BD5;&#x4ECE;&#x76D1;&#x63A7;&#x7684;RMU&#x8FDB;&#x7A0B;&#x4E2D;&#x83B7;&#x53D6;public event&#xFF0C;&#x5E76;&#x5728;&#x8FDB;&#x7A0B;&#x5185;&#x90E8;&#x5206;&#x53D1;&#x3002;</p>
+<p>&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x76F8;&#x4E92;&#x5524;&#x9192;&#xFF0C;&#x662F;&#x901A;&#x8FC7;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x91CF;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x4FE1;&#x53F7;&#x91CF;&#xFF0C;&#x6BCF;&#x4E2A;MatrixLink&#x8FD8;&#x6301;&#x6709;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x4E92;&#x65A5;&#x9501;&#xFF0C;&#x7528;&#x4E8E;&#x4FDD;&#x62A4;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x76F8;&#x5173;&#x7684;&#x72B6;&#x6001;&#x53D8;&#x91CF;&#xFF0C;&#x907F;&#x514D;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x7684;&#x7ADE;&#x6001;&#xFF1B;</li>
+<li>&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x4E92;&#x65A5;&#x9501;&#xFF0C;&#x7528;&#x4E8E;&#x4FDD;&#x62A4;MatrixLink&#x5185;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x907F;&#x514D;thread 1&#x548C;thread 2&#x4E4B;&#x95F4;&#x7684;&#x7ADE;&#x6001;&#xFF1B;</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="event_trans_model.html" class="navigation navigation-prev " aria-label="Previous page: event收发模型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../data/create_and_send_data.html" class="navigation navigation-next " aria-label="Next page: 创建和发送data">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"跨进程event","level":"4.4","depth":1,"next":{"title":"创建和发送data","level":"5.1","depth":1,"path":"watchers/data/create_and_send_data.md","ref":"watchers/data/create_and_send_data.md","articles":[]},"previous":{"title":"event收发模型","level":"4.3","depth":1,"path":"watchers/event/event_trans_model.md","ref":"watchers/event/event_trans_model.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-pro","-lunr"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ziping.he","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"watchers/event/matrix_link.md","mtime":"2020-01-14T06:26:55.719Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T10:12:29.364Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

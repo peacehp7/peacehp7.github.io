@@ -1,0 +1,602 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>创建和发送event · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="ziping.he">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="event_watcher.html" />
+    
+    
+    <link rel="prev" href="../fd_watcher.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Part 0. 概述</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    关于本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../abstract/compile_and_run.html">
+            
+                <a href="../../abstract/compile_and_run.html">
+            
+                    
+                    编译和运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../abstract/config_files.html">
+            
+                <a href="../../abstract/config_files.html">
+            
+                    
+                    配置文件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 1. Module</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../modules/define_a_module.html">
+            
+                <a href="../../modules/define_a_module.html">
+            
+                    
+                    定义module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../modules/init_and_deinit.html">
+            
+                <a href="../../modules/init_and_deinit.html">
+            
+                    
+                    初始化和反初始化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../modules/add_function.html">
+            
+                <a href="../../modules/add_function.html">
+            
+                    
+                    为module添加功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 2. Timer & Fd Watcher</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../timer.html">
+            
+                <a href="../timer.html">
+            
+                    
+                    timer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../fd_watcher.html">
+            
+                <a href="../fd_watcher.html">
+            
+                    
+                    fd_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 3. Event</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="create_and_send_event.html">
+            
+                <a href="create_and_send_event.html">
+            
+                    
+                    创建和发送event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="event_watcher.html">
+            
+                <a href="event_watcher.html">
+            
+                    
+                    event_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="event_trans_model.html">
+            
+                <a href="event_trans_model.html">
+            
+                    
+                    event收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="matrix_link.html">
+            
+                <a href="matrix_link.html">
+            
+                    
+                    跨进程event
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Data</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../data/create_and_send_data.html">
+            
+                <a href="../data/create_and_send_data.html">
+            
+                    
+                    创建和发送data
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../data/data_watcher.html">
+            
+                <a href="../data/data_watcher.html">
+            
+                    
+                    data_watcher
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="../data/data_trans_model.html">
+            
+                <a href="../data/data_trans_model.html">
+            
+                    
+                    data收发模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Part 4. Other Components</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../other_components/log.html">
+            
+                <a href="../../other_components/log.html">
+            
+                    
+                    日志功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="../../other_components/config_rw.html">
+            
+                <a href="../../other_components/config_rw.html">
+            
+                    
+                    配置读写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="../../other_components/string_handling.html">
+            
+                <a href="../../other_components/string_handling.html">
+            
+                    
+                    字符串处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.4" data-path="../../other_components/lock.html">
+            
+                <a href="../../other_components/lock.html">
+            
+                    
+                    锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.5" data-path="../../other_components/db_operation.html">
+            
+                <a href="../../other_components/db_operation.html">
+            
+                    
+                    数据库操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6.6" data-path="../../other_components/python_runner.html">
+            
+                <a href="../../other_components/python_runner.html">
+            
+                    
+                    Python运行器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >创建和发送event</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x521B;&#x5EFA;&#x548C;&#x53D1;&#x9001;event">&#x521B;&#x5EFA;&#x548C;&#x53D1;&#x9001;event</h1>
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+<!-- code_chunk_output -->
+<ul>
+<li><a href="#&#x521B;&#x5EFA;&#x548C;&#x53D1;&#x9001;event">&#x521B;&#x5EFA;&#x548C;&#x53D1;&#x9001;event</a><ul>
+<li><a href="#event&#x7684;&#x521B;&#x5EFA;">event&#x7684;&#x521B;&#x5EFA;</a><ul>
+<li><a href="#&#x5728;eventh&#x4E2D;&#x65B0;&#x589E;event&#x63CF;&#x8FF0;">&#x5728;event.h&#x4E2D;&#x65B0;&#x589E;event&#x63CF;&#x8FF0;</a></li>
+<li><a href="#&#x5728;eventscc&#x4E2D;&#x6CE8;&#x518C;event">&#x5728;events.cc&#x4E2D;&#x6CE8;&#x518C;event</a></li>
+</ul>
+</li>
+<li><a href="#event&#x7684;&#x53D1;&#x9001;">event&#x7684;&#x53D1;&#x9001;</a></li>
+<li><a href="#event&#x521B;&#x5EFA;&#x548C;&#x53D1;&#x9001;&#x7684;&#x5B9E;&#x73B0;">event&#x521B;&#x5EFA;&#x548C;&#x53D1;&#x9001;&#x7684;&#x5B9E;&#x73B0;</a></li>
+</ul>
+</li>
+</ul>
+<!-- /code_chunk_output -->
+<hr>
+<h2 id="event&#x7684;&#x521B;&#x5EFA;">event&#x7684;&#x521B;&#x5EFA;</h2>
+<p>event&#x662F;module&#x4E4B;&#x95F4;&#x7528;&#x4E8E;&#x901A;&#x4FE1;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x7279;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x53D1;&#x9001;&#x8005;&#xFF0C;&#x591A;&#x4E2A;&#x63A5;&#x6536;&#x8005;&#xFF1B;</li>
+<li>&#x53EF;&#x4EE5;&#x643A;&#x5E26;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x643A;&#x5E26;&#xFF0C;&#x53EA;&#x5355;&#x7EAF;&#x901A;&#x77E5;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x4FE1;&#x53F7;&#xFF1B;</li>
+</ul>
+<p>RMU3.0&#x4E2D;&#x7684;event&#x57FA;&#x672C;&#x6CBF;&#x7528;&#x4E86;&#x65E7;&#x6846;&#x67B6;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x4EFB;&#x610F;&#x7684;module&#x90FD;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x4E8B;&#x5148;&#x6CE8;&#x518C;&#x5230;&#x6846;&#x67B6;&#x4E2D;&#x7684;event&#xFF0C;&#x5E76;&#x901A;&#x8FC7;event_watcher&#x7EC4;&#x4EF6;&#x76D1;&#x542C;&#x63A5;&#x6536;&#x7279;&#x5B9A;&#x7684;event&#x3002;</p>
+<p>event&#x7684;&#x76F8;&#x5173;&#x6587;&#x4EF6;&#x4F4D;&#x4E8E;<strong>include/events</strong>&#x53CA;<strong>src/events</strong>&#x76EE;&#x5F55;&#xFF0C;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;event&#xFF0C;&#x9700;&#x8981;&#x7ECF;&#x8FC7;&#x5982;&#x4E0B;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<h3 id="&#x5728;eventh&#x4E2D;&#x65B0;&#x589E;event&#x63CF;&#x8FF0;">&#x5728;event.h&#x4E2D;&#x65B0;&#x589E;event&#x63CF;&#x8FF0;</h3>
+<p>&#x5728;RMU3.0&#x4E2D;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x822C;&#x5F00;&#x53D1;&#x8005;&#x800C;&#x8A00;&#xFF0C;&#x4F1A;&#x7528;&#x5230;&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ol>
+<li>module event - &#x7528;&#x4E8E;module&#x901A;&#x4FE1;&#x7684;&#x4E00;&#x822C;&#x4E8B;&#x4EF6;&#xFF0C;&#x4E0D;&#x643A;&#x5E26;&#x6570;&#x636E;&#xFF0C;&#x53EA;&#x4F5C;&#x4E3A;&#x901A;&#x77E5;&#x4F7F;&#x7528;&#xFF1B;</li>
+<li>module complex event - &#x7528;&#x4E8E;module&#x901A;&#x4FE1;&#x7684;&#x590D;&#x5408;&#x4E8B;&#x4EF6;&#xFF0C;&#x643A;&#x5E26;&#x6570;&#x636E;&#xFF1B;</li>
+</ol>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x4E00;&#x822C;event&#x8FD8;&#x662F;&#x590D;&#x5408;event&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x5728;<strong>include/events/events.h</strong>&#x4E2D;&#x7684;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x4E8B;&#x4EF6;ID&#xFF1A;</p>
+<p><code>events.h</code></p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">enum</span> ModuleEventIds {
+    kEventModuleMin, 
+    <span class="hljs-comment">/* Add new events below */</span>
+
+    kEventTest1, 
+
+    <span class="hljs-comment">/* sentinel */</span>
+    kEventModuleMax
+};
+
+<span class="hljs-keyword">enum</span> ModuleComplexEventIds {
+    kEventModuleComplexMin, 
+    <span class="hljs-comment">/* Add new events below */</span>
+
+    kEventTest2, 
+
+    <span class="hljs-comment">/* sentinel */</span>
+    kEventModuleComplexMax
+};
+
+<span class="hljs-keyword">struct</span> EventTest2 {
+    <span class="hljs-keyword">double</span> sign;
+    <span class="hljs-keyword">int</span> k;
+};
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E00;&#x822C;event&#xFF0C;&#x76F4;&#x63A5;&#x5728;<code>enum ModuleEventIds</code>&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;ID&#x5373;&#x53EF;&#xFF1B;&#x5982;&#x679C;&#x662F;&#x590D;&#x5408;event&#xFF0C;&#x9664;&#x4E86;&#x5728;<code>enum ModuleComplexEventIds</code>&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;ID&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x63CF;&#x8FF0;&#xFF0C;&#x4F5C;&#x4E3A;&#x6B64;event&#x643A;&#x5E26;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x590D;&#x5408;event&#x7684;id&#x53CA;&#x5176;&#x643A;&#x5E26;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x5176;&#x547D;&#x540D;&#x5177;&#x6709;&#x7EDF;&#x4E00;&#x5F62;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;<code>kEventFoo</code>&#x548C;<code>struct EventFoo</code>&#xFF0C;&#x4F46;&#x8FD9;&#x5E76;&#x975E;&#x786C;&#x6027;&#x8981;&#x6C42;&#x3002;</p>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x7ED3;&#x6784;&#x4F53;&#x6D89;&#x53CA;&#x5230;&#x6DF1;&#x62F7;&#x8D1D;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x91CD;&#x8F7D;&#x7ED3;&#x6784;&#x4F53;&#x7684;<code>operator=</code>&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> EventTest2 {
+    EventTest2&amp; <span class="hljs-keyword">operator</span>=(<span class="hljs-keyword">const</span> EventTest2 &amp;e) {
+        <span class="hljs-comment">/* copy here */</span>
+    }
+};
+</code></pre>
+<p>&#x5728;&#x6D89;&#x53CA;&#x6DF1;&#x62F7;&#x8D1D;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x901A;&#x5E38;&#x4E5F;&#x8981;&#x6C42;&#x7ED3;&#x6784;&#x4F53;&#x5305;&#x542B;&#x663E;&#x5F0F;&#x7684;<strong>&#x6790;&#x6784;&#x51FD;&#x6570;</strong>&#xFF0C;&#x4EE5;&#x6B63;&#x786E;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#x3002;</p>
+<h3 id="&#x5728;eventscc&#x4E2D;&#x6CE8;&#x518C;event">&#x5728;events.cc&#x4E2D;&#x6CE8;&#x518C;event</h3>
+<p>&#x5728;<strong>src/events/events.cc</strong>&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x628A;&#x6B64;&#x524D;&#x65B0;&#x589E;&#x7684;&#x4E8B;&#x4EF6;&#x6CE8;&#x518C;&#x5230;&#x6846;&#x67B6;&#xFF1A;</p>
+<p><code>events.cc</code></p>
+<pre><code class="lang-cpp">REGISTER_EVENT(kEventTest1);
+REGISTER_COMPLEX_EVENT(kEventTest2, EventTest2);
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x5B8F;<code>REGISTER_EVENT(event_id)</code>&#x6765;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4E00;&#x822C;event&#xFF1B;</p>
+<p>&#x4F7F;&#x7528;&#x5B8F;<code>REGISTER_COMPLEX_EVENT(event_id, event_data_type)</code>&#x6765;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x590D;&#x5408;event&#xFF0C;&#x5176;&#x4E2D;<code>event_data_type</code>&#x662F;&#x6307;event&#x8981;&#x643A;&#x5E26;&#x7684;&#x6570;&#x636E;&#x4F53;&#x7C7B;&#x578B;&#xFF1B;</p>
+<p>&#x81F3;&#x6B64;&#xFF0C;event&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x3002;</p>
+<h2 id="event&#x7684;&#x53D1;&#x9001;">event&#x7684;&#x53D1;&#x9001;</h2>
+<p>&#x5728;module&#x9664;&#x4E86;<code>init()</code>&#x548C;<code>deinit()</code>&#x5916;&#x7684;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x8C03;&#x7528;<code>SendEvent()</code>&#x63A5;&#x53E3;&#x6765;&#x53D1;&#x9001;&#x4E8B;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-cpp">EventTest2 ev_data;
+<span class="hljs-comment">/* sending module event */</span>
+SendEvent(kEventTest1);
+<span class="hljs-comment">/* sending module complex event */</span>
+SendEvent(kEventTest2, &amp;ev_data);
+</code></pre>
+<p><code>SendEvent()</code>&#x8C03;&#x7528;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x590D;&#x5408;event&#x7684;&#x6570;&#x636E;&#xFF0C;&#x4E5F;&#x5373;&#x4E0A;&#x4F8B;&#x4E2D;&#x7684;<code>ev_data</code>&#x5C31;&#x4E0D;&#x518D;&#x4F7F;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5904;&#x7406;&#x3002;</p>
+<h2 id="event&#x521B;&#x5EFA;&#x548C;&#x53D1;&#x9001;&#x7684;&#x5B9E;&#x73B0;">event&#x521B;&#x5EFA;&#x548C;&#x53D1;&#x9001;&#x7684;&#x5B9E;&#x73B0;</h2>
+<p>&#x5173;&#x4E8E;&#x6B64;&#x8BDD;&#x9898;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;&#x201C;<a href="event_trans_model.html">event&#x6536;&#x53D1;&#x6A21;&#x578B;</a>&#x201D;&#x4E00;&#x8282;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../fd_watcher.html" class="navigation navigation-prev " aria-label="Previous page: fd_watcher">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="event_watcher.html" class="navigation navigation-next " aria-label="Next page: event_watcher">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"创建和发送event","level":"4.1","depth":1,"next":{"title":"event_watcher","level":"4.2","depth":1,"path":"watchers/event/event_watcher.md","ref":"watchers/event/event_watcher.md","articles":[]},"previous":{"title":"fd_watcher","level":"3.2","depth":1,"path":"watchers/fd_watcher.md","ref":"watchers/fd_watcher.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-pro","-lunr"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ziping.he","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"watchers/event/create_and_send_event.md","mtime":"2020-01-14T06:12:57.420Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T10:12:29.364Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
