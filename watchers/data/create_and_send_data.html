@@ -546,14 +546,14 @@ REGISTER_FREE_DATA_Q(kDataTest2, <span class="hljs-number">256</span>, <span cla
 };
 </code></pre>
 <p><code>test_module.cc</code></p>
-<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> TestModule::init()
+<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> TestModule::Init()
 {
     _writer.Claim(<span class="hljs-keyword">this</span>, kDataTest1, kNotLeaky);
 
     <span class="hljs-keyword">return</span> kRetOK;
 }
 </code></pre>
-<p>&#x8981;&#x53D1;&#x9001;data&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x5C06;data_writer&#x7ED1;&#x5B9A;&#x5230;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7684;data_queue&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x5728;<code>init()</code>&#x4E2D;&#x901A;&#x8FC7;<code>Claim()</code>&#x63A5;&#x53E3;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<strong>&#x4E00;&#x4E2A;data queue&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;writer</strong>&#x3002;</p>
+<p>&#x8981;&#x53D1;&#x9001;data&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x5C06;data_writer&#x7ED1;&#x5B9A;&#x5230;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x7684;data_queue&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x5728;<code>Init()</code>&#x4E2D;&#x901A;&#x8FC7;<code>Claim()</code>&#x63A5;&#x53E3;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<strong>&#x4E00;&#x4E2A;data queue&#x53EA;&#x80FD;&#x6709;&#x4E00;&#x4E2A;writer</strong>&#x3002;</p>
 <h3 id="get-buffer&#x64CD;&#x4F5C;">Get buffer&#x64CD;&#x4F5C;</h3>
 <p>&#x8981;&#x53D1;&#x9001;&#x6570;&#x636E;&#xFF0C;&#x9996;&#x5148;&#x8981;&#x8BF7;&#x6C42;buffer&#xFF0C;&#x4F7F;&#x7528;<code>GetBuffer()</code>&#x63A5;&#x53E3;&#xFF1A;</p>
 <pre><code class="lang-cpp"><span class="hljs-keyword">void</span> *buffer = _writer.GetBuffer();
@@ -612,7 +612,7 @@ REGISTER_FREE_DATA_Q(kDataTest2, <span class="hljs-number">256</span>, <span cla
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"创建和发送data","level":"5.1","depth":1,"next":{"title":"data_watcher","level":"5.2","depth":1,"path":"watchers/data/data_watcher.md","ref":"watchers/data/data_watcher.md","articles":[]},"previous":{"title":"跨进程event","level":"4.4","depth":1,"path":"watchers/event/matrix_link.md","ref":"watchers/event/matrix_link.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-pro","-lunr"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ziping.he","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"watchers/data/create_and_send_data.md","mtime":"2020-01-14T09:09:00.466Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-16T10:12:29.364Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"创建和发送data","level":"5.1","depth":1,"next":{"title":"data_watcher","level":"5.2","depth":1,"path":"watchers/data/data_watcher.md","ref":"watchers/data/data_watcher.md","articles":[]},"previous":{"title":"跨进程event","level":"4.4","depth":1,"path":"watchers/event/matrix_link.md","ref":"watchers/event/matrix_link.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-search","search-pro","-lunr"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search-pro":{},"highlight":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ziping.he","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"watchers/data/create_and_send_data.md","mtime":"2020-01-19T01:41:20.073Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-01-19T06:11:41.010Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
